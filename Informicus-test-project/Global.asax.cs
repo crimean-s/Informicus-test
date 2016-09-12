@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 using System.Data.Entity;
-using static Informicus_test_project.Models.Entities;
-
-using System.Web.Configuration;
-using System.Configuration;
+using Domain;
+using static Domain.EFDbContext;
 
 namespace Informicus_test_project
 {
@@ -19,7 +13,7 @@ namespace Informicus_test_project
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer<SiteContext>(new SiteContextInitializer());
+            Database.SetInitializer<EFDbContext>(new SiteContextInitializer());
         }
     }
 }

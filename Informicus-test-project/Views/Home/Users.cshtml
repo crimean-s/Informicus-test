@@ -1,0 +1,25 @@
+﻿@using Domain.Entities
+@model IEnumerable<User>
+
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>@ViewBag.Title</h1>
+        <ul class="list-group">
+            
+            @foreach (User user in Model)
+            {
+                <li class="list-group-item">Id - @user.UserId, Nickname - @user.UserNickname, Group - @user.GroupId</li>
+            }
+            
+        </ul>
+
+    </div>
+
+</div>

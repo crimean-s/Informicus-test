@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informicus-test-project", "Informicus-test-project\Informicus-test-project.csproj", "{6BFD8FAB-24C3-4ADC-B7C5-E590B2E40CA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E4663D7D-FCDB-4B59-8C00-4D3EB846AD4F} = {E4663D7D-FCDB-4B59-8C00-4D3EB846AD4F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E4663D7D-FCDB-4B59-8C00-4D3EB846AD4F}"
 EndProject
