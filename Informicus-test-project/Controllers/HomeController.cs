@@ -17,6 +17,8 @@ namespace Informicus_test_project.Controllers
         // GET: Times
         public ActionResult Times()
         {
+            string hour = DateTime.Now.ToShortTimeString();
+            ViewBag.CurrentTime = hour;
             return View();
         }
 
