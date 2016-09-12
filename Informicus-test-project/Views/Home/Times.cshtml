@@ -8,8 +8,26 @@
 
     <div class="starter-template">
         <h1>Times</h1>
-        <p class="lead">Current time: @ViewBag.CurrentTime</p>
+        <ul class="list-group">
+            <li class="list-group-item">Current time: @ViewBag.CurrentTime<span class="badge">Local time</span></li>
+            @{int i = 0;}
+            @foreach (var x in @ViewBag.UtcTimeList)
+            {
+                <li class="list-group-item">@x<span class="badge">UTC @i</span></li>
+                i++;
+            }
+            <li class="list-group-item" id="js_time"></li>
+        </ul>
+        
     </div>
 
 </div><!-- /.container -->
-
+<script>
+    function clock() {
+        var date = new Date();
+        var time = date.toTimeString();
+        document.getElementById("js_time").innerHTML = time + '<span class="badge">Local time by Javascript</span>';
+        setTimeout("clock()", 1000);
+    };
+    clock();
+</script>

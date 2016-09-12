@@ -17,8 +17,15 @@ namespace Informicus_test_project.Controllers
         // GET: Times
         public ActionResult Times()
         {
-            string hour = DateTime.Now.ToShortTimeString();
-            ViewBag.CurrentTime = hour;
+            string localTime = DateTime.Now.ToShortTimeString();
+            var utcTime = DateTime.UtcNow;
+            List<DateTime> utcAllu = new List<DateTime>();
+            for (int i=0; i < 10; i++)
+            {
+                utcAllu.Add(utcTime.AddHours(i));
+            }
+            ViewBag.CurrentTime = localTime;
+            ViewBag.UtcTimeList = utcAllu;
             return View();
         }
 
