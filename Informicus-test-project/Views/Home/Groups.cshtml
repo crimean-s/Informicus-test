@@ -1,0 +1,11 @@
+﻿@using Domain.Entities
+@model IEnumerable<Group>
+
+<ul class="list-group">
+
+    @foreach (Group group in Model)
+     {
+        <li class="list-group-item">Id - @group.GroupId, Groupname - @group.GroupName</li>
+     }
+
+</ul>

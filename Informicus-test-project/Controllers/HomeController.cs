@@ -15,10 +15,18 @@ namespace Informicus_test_project.Controllers
             return View();
         }
 
+        // GET: Users
         public ActionResult Users()
         {
             EFUsersRepository repository = new EFUsersRepository();
             return View(repository.GetUsers());
+        }
+
+        // GET: Groups
+        public ActionResult Groups()
+        {
+            EFUsersRepository repository = new EFUsersRepository();
+            return PartialView(repository.GetGroups());
         }
 
         // GET: Times
