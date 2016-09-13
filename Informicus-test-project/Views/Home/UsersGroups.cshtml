@@ -1,0 +1,27 @@
+﻿@using Domain.Entities
+@model Informicus_test_project.Models.ViewModels.UsersGroupViewModel
+
+
+@{
+    ViewBag.Title = "show User list and Group list by ViewModel";
+}
+
+<h1>@ViewBag.Title</h1>
+<h2>Groups</h2>
+<ul class="list-group">
+
+    @foreach (Group group in Model.Groups)
+    {
+        <li class="list-group-item">Id - @group.GroupId, Groupname - @group.GroupName</li>
+    }
+
+</ul>
+<h2>Users</h2>
+<ul class="list-group">
+
+    @foreach (User user in Model.Users)
+    {
+        <li class="list-group-item">Id - @user.UserId, Nickname - @user.UserNickname, Group - @user.GroupId</li>
+    }
+
+</ul>
