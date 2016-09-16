@@ -9,9 +9,9 @@ using Domain.Entities;
 
 namespace Domain
 {
-    public class EFDbContext : DbContext 
+    public class DbContext : System.Data.Entity.DbContext 
     {
-        public EFDbContext(string connectionString)
+        public DbContext(string connectionString)
         {
             Database.Connection.ConnectionString = connectionString;
         }
@@ -22,10 +22,11 @@ namespace Domain
         public DbSet<Group> Groups { get; set; }
 
 
-        public class SiteContextInitializer : CreateDatabaseIfNotExists<EFDbContext>
+        public class SiteContextInitializer : CreateDatabaseIfNotExists<DbContext>
         {
-            protected override void Seed(EFDbContext db)
+            protected override void Seed(DbContext db)
             {
+                
                 IList<User> users = new List<User>();
 
                 users.Add(new User() { UserNickname = "Bob", GroupId = 1 });
@@ -41,8 +42,8 @@ namespace Domain
                 IList<Group> groups = new List<Group>();
 
                 groups.Add(new Group() { GroupName = "Admin" });
-                groups.Add(new Group() { GroupName = "Editor" });
-                groups.Add(new Group() { GroupName = "User" });
+                groups.Add(new Group() { GroupName = "Client" });
+                groups.Add(new Group() { GroupName = "Expert" });
 
                 foreach (Group group in groups)
                     db.Groups.Add(group);

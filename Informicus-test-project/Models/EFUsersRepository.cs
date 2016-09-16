@@ -10,11 +10,11 @@ namespace Informicus_test_project.Models
 {
     public class EFUsersRepository
     {
-        private EFDbContext context;
+        private DbContext context;
 
         public EFUsersRepository ()
         {
-            context = new EFDbContext(ConfigurationManager.ConnectionStrings[0].ConnectionString);
+            context = new DbContext(ConfigurationManager.ConnectionStrings[0].ConnectionString);
         }
 
         // Users

@@ -13,5 +13,11 @@ namespace Informicus_test_project.Controllers
         {
             return View();
         }
+
+        public ActionResult RegisterUser(int id)
+        {
+            ViewBag.UserType = id;
+            return View();
+        }
     }
 }

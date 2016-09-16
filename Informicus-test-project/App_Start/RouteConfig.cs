@@ -18,6 +18,13 @@ namespace Informicus_test_project
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "RegisterUser",
+                url: "Register/{action}/{id}",
+                defaults: new { controller = "Register", action = "RegisterUser", id = UrlParameter.Optional },
+                constraints: new { id = @"\d+" }
+            );
         }
     }
 }

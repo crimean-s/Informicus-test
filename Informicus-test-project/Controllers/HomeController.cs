@@ -15,7 +15,7 @@ namespace Informicus_test_project.Controllers
     public class HomeController : Controller
     {
 
-        EFDbContext data = new EFDbContext(ConfigurationManager.ConnectionStrings[0].ConnectionString);
+        DbContext data = new DbContext(ConfigurationManager.ConnectionStrings[0].ConnectionString);
 
         // GET: Home
         public ActionResult Index()

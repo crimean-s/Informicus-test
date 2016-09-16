@@ -3,7 +3,7 @@ using System.Web.Routing;
 
 using System.Data.Entity;
 using Domain;
-using static Domain.EFDbContext;
+using static Domain.DbContext;
 
 namespace Informicus_test_project
 {
@@ -13,7 +13,7 @@ namespace Informicus_test_project
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer<EFDbContext>(new SiteContextInitializer());
+            Database.SetInitializer<Domain.DbContext>(new SiteContextInitializer());
         }
     }
 }
