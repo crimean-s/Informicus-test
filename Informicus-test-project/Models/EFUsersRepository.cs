@@ -24,9 +24,9 @@ namespace Informicus_test_project.Models
             return context.Users;
         }
 
-        public User GetUserById (string id)
+        public User GetUserById (int id)
         {
-            return context.Users.FirstOrDefault(x => x.Id == id);
+            return context.Users.FirstOrDefault(x => x.UserId == id);
         }
 
         // Groups
