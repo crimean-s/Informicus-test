@@ -26,7 +26,7 @@ namespace Informicus_test_project.Controllers
         // GET: Users Groups
         public ActionResult UsersGroups()
         {
-            IEnumerable<User> users = data.Users.Where(x => x.UserNickname.Length > 0);
+            IEnumerable<User> users = data.Users.Where(x => x.UserName.Length > 0);
             IEnumerable<Group> groups = data.Groups.Where(x => x.GroupName.Length > 0);
 
             UsersGroupViewModel ugvm = new UsersGroupViewModel

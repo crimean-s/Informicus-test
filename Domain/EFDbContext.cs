@@ -29,12 +29,12 @@ namespace Domain
                 
                 IList<User> users = new List<User>();
 
-                users.Add(new User() { UserNickname = "Bob", GroupId = 1 });
-                users.Add(new User() { UserNickname = "Nick", GroupId = 3 });
-                users.Add(new User() { UserNickname = "Mat", GroupId = 2 });
-                users.Add(new User() { UserNickname = "Gaga", GroupId = 2 });
-                users.Add(new User() { UserNickname = "Robson", GroupId = 2 });
-                users.Add(new User() { UserNickname = "Miha", GroupId = 3 });
+                users.Add(new User() { UserName = "Bob", GroupId = 1 });
+                users.Add(new User() { UserName = "Nick", GroupId = 3 });
+                users.Add(new User() { UserName = "Mat", GroupId = 2 });
+                users.Add(new User() { UserName = "Gaga", GroupId = 2 });
+                users.Add(new User() { UserName = "Robson", GroupId = 2 });
+                users.Add(new User() { UserName = "Miha", GroupId = 3 });
 
                 foreach (User user in users)
                     db.Users.Add(user);
